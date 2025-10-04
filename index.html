@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepCatch - Crypto Analytics Platform</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="DeepCatch Logo" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="#tokenomics" class="nav-link">Tokenomics</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Catch Smart Money Before the Market Does</h1>
+            <p class="hero-subtitle">Advanced crypto analytics platform that tracks whale movements, smart wallet activities, and emerging trends in real-time.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Launch App</button>
+                <button class="btn btn-secondary">Learn More</button>
+            </div>
+            <div class="launch-info">
+                <p class="launching-text">LAUNCHING ON SNEK.FUN</p>
+                <div class="policy-id-container">
+                    <span class="policy-id-label">POLICY ID :</span>
+                    <span class="policy-id-value" id="policyId">SNEK.FUN</span>
+                    <button class="copy-btn" id="copyPolicyId" title="Copy Policy ID">📋</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🐋</div>
+                    <h3>Whale Alerts</h3>
+                    <p>Real-time notifications for large transactions and whale movements across major exchanges.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏷️</div>
+                    <h3>Smart Wallet Labels</h3>
+                    <p>AI-powered identification and labeling of sophisticated trading wallets and funds.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Tracking</h3>
+                    <p>Live monitoring of blockchain activities with millisecond precision and comprehensive analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Pattern Recognition</h3>
+                    <p>Advanced algorithms detect trading patterns and predict market movements before they happen.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Portfolio Insights</h3>
+                    <p>Detailed analysis of portfolio flows and smart money positioning strategies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Process millions of transactions per second with our optimized infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2 class="section-title">Dashboard Preview</h2>
+            <div class="dashboard-content">
+                <div class="dashboard-table">
+                    <h3>Recent Whale Transactions</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Wallet</th>
+                                <th>Token</th>
+                                <th>Amount</th>
+                                <th>Value</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionTable">
+                            <!-- Data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="dashboard-chart">
+                    <h3>Volume Trends (24h)</h3>
+                    <canvas id="volumeChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics" class="tokenomics">
+        <div class="container">
+            <h2 class="section-title">Tokenomics</h2>
+            <div class="tokenomics-content">
+                <div class="tokenomics-chart">
+                    <canvas id="tokenomicsChart" width="300" height="300"></canvas>
+                </div>
+                <div class="tokenomics-info">
+                    <h3>$DEEP Token Distribution</h3>
+                    <div class="tokenomics-list">
+                        <div class="tokenomics-item">
+                            <span class="dot fairlaunch"></span>
+                            <span>Fairlaunch (95%)</span>
+                        </div>
+                        <div class="tokenomics-item">
+                            <span class="dot marketing"></span>
+                            <span>Marketing & Development (3%)</span>
+                        </div>
+                        <div class="tokenomics-item">
+                            <span class="dot team"></span>
+                            <span>Team Vested (2%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <h2 class="section-title">Roadmap</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Q1 2024</h3>
+                        <p>Platform launch with basic whale tracking and wallet labeling features.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Q2 2024</h3>
+                        <p>Advanced analytics dashboard and mobile app release.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Q3 2024</h3>
+                        <p>AI-powered prediction models and cross-chain support.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Q4 2024</h3>
+                        <p>Enterprise features and API access for institutional clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Stay Updated</h2>
+            <div class="newsletter">
+                <p>Get the latest insights and updates delivered to your inbox.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DeepCatch</h4>
+                    <p>Advanced crypto analytics for smart investors.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#tokenomics">Tokenomics</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://x.com/DeepCatchAi">Twitter</a></li>
+                        <li><a href="#">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DeepCatch. All rights reserved. | This is a demo website for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
